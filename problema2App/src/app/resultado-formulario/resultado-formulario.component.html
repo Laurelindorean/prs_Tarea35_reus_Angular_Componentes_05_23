@@ -1,0 +1,26 @@
+<br><br>
+<div class="container">
+  <div>
+    <h1 style="text-align: center;">{{tituloResultado}}</h1>
+  </div>
+<div class="table-responsive">
+
+<table class="table table-bordered" align="center">
+  <tr>
+    <th scope="row">Nombre</th>
+    <th scope="row">Email</th>
+    <th scope="row">Mensaje</th>
+  </tr>
+  <tr *ngFor="let valor of formValues">
+    <td>{{valor.nombre}}</td>
+    <td>{{valor.email}}</td>
+    <td>{{valor.mensaje}}</td>
+  </tr>
+
+
+
+</table>
+
+</div>
+
+</div>
