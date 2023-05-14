@@ -1,0 +1,86 @@
+<div class="container mb-3">
+  <div class="col" style="text-align: center">
+    <h1>{{ tituloAlta }}</h1>
+  </div>
+  <br /><br />
+  <form class="form-group col">
+    <div class="d-flex mb-3 justify-content-evenly align-items-center">
+      <label for="nombre" class="form-label pe-3">Nombre:</label>
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        class="form-control"
+        [(ngModel)]="boxName"
+      />
+    </div>
+    <div class="d-flex mb-3 justify-content-evenly align-items-center">
+      <label for="cif" class="form-label pe-3 cif">CIF: </label>
+      <input
+        type="text"
+        name="cif"
+        id="cif"
+        class="form-control"
+        [(ngModel)]="boxCif"
+      />
+    </div>
+    <div class="d-flex mb-3 justify-content-evenly align-items-center">
+      <label for="direccion" class="form-label pe-3">Dirección:</label>
+      <input
+        type="text"
+        name="direccion"
+        id="direccion"
+        class="form-control"
+        [(ngModel)]="boxAdress"
+      />
+    </div>
+    <div class="d-flex mb-3 justify-content-evenly align-items-center">
+      <label for="grupo" class="form-label pe-3">Grupo:</label>
+      <input
+        type="text"
+        name="grupo"
+        id="grupo"
+        class="form-control"
+        [(ngModel)]="boxGrupo"
+      />
+    </div>
+    <div class="col">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="addClient()"
+        style="margin-top: 35px"
+      >
+        Guardar
+      </button>
+    </div>
+  </form>
+</div>
+<div class="container mb-3">
+  <br /><br />
+  <div class="col" style="text-align: center">
+    <h1>{{ tituloListado }}</h1>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table" align="center">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">CIF</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Grupo</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr scope="row" *ngFor="let cliente of clientes">
+            <td>{{ cliente.nombre }}</td>
+            <td>{{ cliente.cif }}</td>
+            <td>{{ cliente.direccion }}</td>
+            <td>{{ cliente.grupo }}</td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
